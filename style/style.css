@@ -1,0 +1,336 @@
+:root {
+  --main-text-color: #303030;
+  --fone-text-color: #9da4bd;
+  --pretitle-text-color: rgba(157, 164, 189, 0.6);
+  --first-title-color: #ffffff;
+  --second-title-color: #303030;
+  --accent-color: #ff6c00;
+  --content-text-color: #555555;
+  --second-fone-color:#F7F7F7 ;
+  --main-fone-color:#FFFFFF;
+  --margin-between:20px;
+}
+*{
+  box-sizing: border-box;
+}
+
+.container{
+  width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  outline: 1px solid red;
+}
+body {
+  font-family: 'Open Sans', sans-serif;
+  background-color: var(--main-fone-color);
+  color: var(--main-text-color);
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p{
+  margin: 0;
+} 
+ul, ol{
+  margin: 0;
+  padding-left: 0;
+}
+img{
+  display: block;
+}
+a {
+  text-decoration: none;
+  list-style: none;
+}
+ul {
+  list-style: none;
+}
+.visually-hidden {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  margin: -1px;
+}
+/* 
+* -Універсальний селектор 
+тег
+ID
+клас 
+атрибут
+потомка
+дитини
+сусіда*/
+/* ----HEADER----- */
+.header {
+  background-color: gray;
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+.header-item,
+.header-tel {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 1.33;
+  letter-spacing: 0.1em;
+
+  color: var(--first-title-color);
+}
+.header-item:hover,
+.header-item:focus,
+.header-tel:hover,
+.header-tel:focus {
+  color: var(--accent-color);
+}
+
+.first-btn {
+  font-family: inherit;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 1.33;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  border: 1px solid var(--accent-color);
+  border-radius: 25px;
+  background-color: transparent;
+  cursor: pointer;
+  color: var(--first-title-color);
+}
+.second-btn{
+font-family: inherit;
+font-weight: 600;
+font-size: 12px;
+line-height: 1.33;
+letter-spacing: 0.09em;
+text-transform: uppercase;
+border: 1px solid var(--accent-color);
+border-radius: 25px;
+background-color: transparent;
+cursor: pointer;
+color: var(--second-title-color);
+}
+/* ----HERO---- */
+.hero-link {
+  font-style: normal;
+  font-weight: 600;
+  color: var(--main-text-color);
+  font-size: 11px;
+  line-height: 1.36;
+  letter-spacing: 0.2em;
+}
+.hero-link:hover,
+.hero-link:focus {
+  color: var(--accent-color);
+}
+.hero-pre-title {
+  margin-bottom: var(--margin-between);
+
+  font-family: 'Open Sans' sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.36;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+
+  color: var(--pretitle-text-color);
+}
+.hero-title {
+  margin-bottom:var(--margin-between);
+
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 72px;
+  line-height: 1.18;
+  letter-spacing: 0.05em;
+
+  color: var(--first-title-color);
+  background-color: #303030;
+}
+.hero-after-title {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.36;
+  letter-spacing: 0.02em;
+  color: var(--fone-text-color);
+  width: 400px
+}
+.hero-content{
+  padding: 272px 0 206px 96px  ;
+}
+
+.pre-title {
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.36;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+.title{
+  font-weight: 700;
+  font-size: 42px;
+  line-height: 1.17;
+  letter-spacing: 0.05em;
+}
+.after-title{
+  font-size: 18px;
+  line-height: 1.67;
+  letter-spacing: 0.02em;
+}
+
+/* ----ABOUT---- */
+.about-pre, .about-title{
+  margin-bottom: 20px;
+  color: var(--main-text-color);
+}
+.about-after{
+  margin-bottom: 20px;
+  color: var(--content-text-color);
+}
+.about-text{
+  margin-bottom: 40px;
+
+  font-size: 14px;
+  line-height: 1.86;
+  letter-spacing: 0.02em;
+  color:var(--content-text-color)
+}
+/* ПОСЛУГИ */
+.section{
+  padding-top: 130px;
+  padding-bottom: 130px;
+}
+.service-pre-title{
+  margin-bottom: 20px;
+
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.36;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  
+  color:var(--pretitle-text-color);
+}
+.service-title{
+  color: var(--first-title-color);
+  background: #000;
+}
+/* Ціна послуг */
+.price-list{
+  padding: 30px 40px;
+
+  border: 1px solid black;
+}
+.price-item-text{
+  margin-bottom: 20px;
+
+  font-size: 18px;
+  line-height: 1.67; 
+  letter-spacing: 0.02em;
+  color: var(--fone-text-color);
+}
+
+
+/* наші досягнення */
+.achive-box{
+  padding: 20px 24px;
+
+  width: 170px;
+  height: 133px;
+  background-color: var(--second-fone-color);
+}
+
+.achivment{
+margin-bottom: 6px;
+
+font-weight: 700;
+font-size: 42px;
+line-height: 1.36;
+text-align: center;
+letter-spacing: 0.05em;
+color: var(--main-text-color);
+}
+.achivment-about{
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.36;
+  text-align: center;
+  color: var(--main-text-color);
+}
+.advanteges-about{
+font-size: 18px;
+line-height: 1.67;
+letter-spacing: 0.02em;
+}
+/* Майстри */
+.masters{
+  background-color: var(--second-fone-color);
+}
+.master-name{
+font-size: 18px;
+line-height: 1.39;
+text-align: center;
+letter-spacing: 0.02em;
+}
+.position{
+font-size: 14px;
+line-height: 1.36;
+text-align: center;
+letter-spacing: 0.02em;
+color: var(--accent-color);
+}
+/* Галерея */
+/* контакти */
+.contacts-link{
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.67;
+  letter-spacing: 0.02em;
+  color: var(--fone-text-color);
+}
+.schedual-title{
+font-weight: 600;
+font-size: 11px;
+line-height: 1.36;
+
+letter-spacing: 0.1em;
+text-transform: uppercase;
+color: var(--first-title-color);
+}
+.schedual{
+  font-size: 18px;
+  line-height: 1.67;
+  letter-spacing: 0.02em;
+  color: var(--fone-text-color);
+}
+/* ФУТЕР */
+.copyright{
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.36;
+  letter-spacing: 0.2em;
+  color: var(--fone-text-color);
+}
+.social{
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.36;
+  letter-spacing: 0.2em;
+  color: var(--fone-text-color);
+}
+.displ{
+  display: in ;
+}

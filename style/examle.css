@@ -1,0 +1,55 @@
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
+.list {
+  list-style: none;
+}
+
+.link {
+  text-decoration: none;
+}
+/* тега */
+p {
+  color: teal;
+}
+/* універсальний */
+* {
+  color: tomato;
+}
+/* ID */
+#text {
+  color: purple;
+}
+/* класу */
+.text,
+.header-link {
+  color: violet;
+}
+
+.header-list.list {
+}
+
+.header-list .list {
+}
+
+[href="https://www.google.com/"]
+{
+  color: green;
+}
+/* сусід */
+.header-tel + button {
+  background-color: blueviolet;
+}
+
+/*
+ * - Универсальний селектор
+ тег
+ ID
+ класс
+ атрибут
+ потомка
+ ребенка
+ соседа
+
+ */
