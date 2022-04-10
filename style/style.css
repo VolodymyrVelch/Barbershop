@@ -62,24 +62,36 @@ ul {
   clip-path: inset(50%);
   margin: -1px;
 }
-/* 
-* -Універсальний селектор 
-тег
-ID
-клас 
-атрибут
-потомка
-дитини
-сусіда*/
 /* ----HEADER----- */
 .header {
   background-color: gray;
   padding-top: 32px;
   padding-bottom: 32px;
 }
-.header-item,
+.header-logo{
+  margin-right: 70px;
+}
+.header .container{
+  display: flex;
+  align-items: center;
+}
+.header-list{
+  display: flex;
+}
+.cont-header{
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+}
+.header-tel{
+  margin-right:40px ;
+}
+.header-item:not(:last-child){
+margin-right: 40px;
+}
+
+.header-link,
 .header-tel {
-  font-style: normal;
   font-weight: 600;
   font-size: 12px;
   line-height: 1.33;
@@ -87,14 +99,14 @@ ID
 
   color: var(--first-title-color);
 }
-.header-item:hover,
-.header-item:focus,
+.header-link:hover,
+.header-link:focus,
 .header-tel:hover,
 .header-tel:focus {
   color: var(--accent-color);
 }
 
-.first-btn {
+.btn {
   font-family: inherit;
   font-weight: 600;
   font-size: 12px;
@@ -104,23 +116,21 @@ ID
   border: 1px solid var(--accent-color);
   border-radius: 25px;
   background-color: transparent;
+  height:40px ;
+  min-width: 160px;
   cursor: pointer;
+  padding: 12px 20px;
+}
+.btn-header{
   color: var(--first-title-color);
 }
-.second-btn{
-font-family: inherit;
-font-weight: 600;
-font-size: 12px;
-line-height: 1.33;
-letter-spacing: 0.09em;
-text-transform: uppercase;
-border: 1px solid var(--accent-color);
-border-radius: 25px;
-background-color: transparent;
-cursor: pointer;
-color: var(--second-title-color);
-}
 /* ----HERO---- */
+.hero .container{
+  display: flex;
+}
+.hero-item{
+  width: 93px;
+}
 .hero-link {
   font-style: normal;
   font-weight: 600;
@@ -157,9 +167,9 @@ color: var(--second-title-color);
   letter-spacing: 0.05em;
 
   color: var(--first-title-color);
-  background-color: #303030;
 }
 .hero-after-title {
+  text-align: left;
   font-weight: 400;
   font-size: 18px;
   line-height: 1.36;
@@ -168,7 +178,9 @@ color: var(--second-title-color);
   width: 400px
 }
 .hero-content{
-  padding: 272px 0 206px 96px  ;
+  padding: 272px 0 206px 96px;
+  flex-grow: 1;
+  background-color: #000;
 }
 
 .pre-title {
@@ -185,12 +197,26 @@ color: var(--second-title-color);
   letter-spacing: 0.05em;
 }
 .after-title{
+  
   font-size: 18px;
   line-height: 1.67;
   letter-spacing: 0.02em;
 }
 
 /* ----ABOUT---- */
+.about .container{
+  display: flex;
+}
+
+.about-list{
+  display: flex;
+}
+.about-list li:last-child {
+margin-left: 30px;
+}
+.about-content{
+  margin-left: 64px;
+}
 .about-pre, .about-title{
   margin-bottom: 20px;
   color: var(--main-text-color);
@@ -207,10 +233,16 @@ color: var(--second-title-color);
   letter-spacing: 0.02em;
   color:var(--content-text-color)
 }
+.about-btn{
+  color: var(--second-title-color);
+}
 /* ПОСЛУГИ */
 .section{
   padding-top: 130px;
   padding-bottom: 130px;
+}
+.service{
+  background-color: black;
 }
 .service-pre-title{
   margin-bottom: 20px;
@@ -224,14 +256,25 @@ color: var(--second-title-color);
   color:var(--pretitle-text-color);
 }
 .service-title{
+  margin-bottom: 40px;
+
   color: var(--first-title-color);
   background: #000;
 }
 /* Ціна послуг */
+.price-wrap{
+  display: flex;
+  margin-bottom: 50px;
+}
 .price-list{
   padding: 30px 40px;
-
-  border: 1px solid black;
+  flex-grow: 1;
+  
+  border: 1px solid white;
+}
+.price-item{
+  display: flex;
+  justify-content: space-between;
 }
 .price-item-text{
   margin-bottom: 20px;
@@ -241,9 +284,19 @@ color: var(--second-title-color);
   letter-spacing: 0.02em;
   color: var(--fone-text-color);
 }
-
-
+.price-btn{
+  display: block;
+  margin: 0 auto;
+  color: var(--first-title-color);
+}
 /* наші досягнення */
+.advanteges .container{
+  display: flex;
+}
+.advanteges-list{
+display: flex;
+padding: 114px 0 137px 55px;
+}
 .achive-box{
   padding: 20px 24px;
 
@@ -274,11 +327,40 @@ font-size: 18px;
 line-height: 1.67;
 letter-spacing: 0.02em;
 }
+.advantege-cont{
+  padding: 123px 0 216px 130px;
+}
+.advanteges-pre{
+  margin-bottom: var(--margin-between);
+  max-width: 412px;
+}
+.advanteges-title{
+  margin-bottom: var(--margin-between);
+  max-width: 500px;
+}
+
 /* Майстри */
 .masters{
   background-color: var(--second-fone-color);
 }
+.master-pre{
+  margin-bottom: var(--margin-between);
+}
+.master-title{
+  margin-bottom: 44px;
+}
+.masters-card{
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -30px;
+}
+.masters-content{
+flex-basis: calc(100%/3 -30px);
+margin-left: 30px;
+}
 .master-name{
+margin: 30px 0 8px 0;
+
 font-size: 18px;
 line-height: 1.39;
 text-align: center;
@@ -292,6 +374,21 @@ letter-spacing: 0.02em;
 color: var(--accent-color);
 }
 /* Галерея */
+.galery-pre{
+  margin-bottom: 44px;
+}
+.galery-list{
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -30px;
+  margin-bottom: -30px;
+  
+}
+.galery-item{
+  flex-basis: calc(100%/4-30px);
+margin-left: 30px;
+margin-bottom: 30px;
+}
 /* контакти */
 .contacts-link{
   font-style: normal;

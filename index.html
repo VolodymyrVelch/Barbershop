@@ -16,19 +16,19 @@
     <!-- header -->
     <header class="header">
         <div class="container">
-            <a clas="header-logo" href=""><img src="./image/Logo.svg" alt="Лого"></a>
+            <a class="header-logo" href=""><img src="./image/Logo.svg" alt="Лого"></a>
             <nav class="header-nav">
-                <ul clas="header-list">
-                    <li> <a href="" class="header-item">О нас</a></li>
-                    <li> <a href="" class="header-item">Услуги и цены</a></li>
-                    <li> <a href="" class="header-item">Мастера</a></li>
-                    <li> <a href="" class="header-item">Контакты</a></li>
+                <ul class="header-list">
+                    <li class="header-item"> <a href="" class="header-link">О нас</a></li>
+                    <li class="header-item"> <a href="" class="header-link">Услуги и цены</a></li>
+                    <li class="header-item"> <a href="" class="header-link">Мастера</a></li>
+                    <li class="header-item"> <a href="" class="header-link">Контакты</a></li>
                 </ul>
             </nav>
-            <ul>
-                <li><a href="Tel:+380441111111" class="header-tel link">+38 044 111 11 11</a></li>
-                <li> <button type="button" class="first-btn">Онлайн-запись</button> </li>
-            </ul>
+            <div class="cont-header">
+                <a href="Tel:+380441111111" class="header-tel">+38 044 111 11 11</a></li>
+                <button type="button" class="btn-header btn">Онлайн-запись</button> </li>
+            </div>
         </div>
     </header>
     <!-- main -->
@@ -37,7 +37,7 @@
         <section class="hero">
             <div class="container">
             <!-- бокове -->
-                <ul>
+                <ul class="hero-item">
                     <li><a class="hero-link" href="" target="_blank">Instagram</a></li>
                     <li><a class="hero-link" href="" target="_blank">YouTube</a></li>
                 </ul>
@@ -56,72 +56,79 @@
                 <li><img src="./image/img 1about-min.jpg" alt="Барбер бреет" width="270" height="445"></li>
                 <li><img src="./image/img 2about-min.jpg" alt="Барбер бреет висок" width="270" height="445"></li>
             </ul>
-            <p class="pre-title about-pre">О НАС</p>
-            <h2 class="title about-title">Лучший Барбершоп твоего города</h2>
-            <p class="after-title about-after">Если ты хочешь добавить в свой образ больше уверенности – тебе точно к нам.</p>
-            <p class="about-text">Мы команда, которая никогда не останавливается на достигнутом
-            и жаждет перемен. И когда ты попадешь в руки нашего мастера,
-            то уже никогда не сможешь быть прежним. Мы команда, которая всегда с клиентами "на одной волне". Поэтому, мы всегда
-            готовы усовершенствовать каждого, кто к нам приходит!</p>
-            <button type="button" class="second-btn">онлайн-запись</button>
+            <div class="about-content"> 
+                <p class="pre-title about-pre">О НАС</p>
+                <h2 class="title about-title">Лучший Барбершоп твоего города</h2>
+                <p class="after-title about-after">Если ты хочешь добавить в свой образ больше уверенности – тебе точно к нам.</p>
+                <p class="about-text">Мы команда, которая никогда не останавливается на достигнутом
+                    и жаждет перемен. И когда ты попадешь в руки нашего мастера,
+                    то уже никогда не сможешь быть прежним. Мы команда, которая всегда с клиентами "на одной волне". Поэтому, мы всегда
+                    готовы усовершенствовать каждого, кто к нам приходит!</p>
+                <button type="button" class="about-btn btn">онлайн-запись</button>
+            </div>
             </div>
         </section>
         <!-- Секція3 -->
-        <section class="service section"> 
-            <div class="container">
+        <section class=" section service"> 
+            <div class="container ">
             <p class="service-pre-title">Проведи время в компании лучших мастеров</p>
             <h2 class="title service-title">Услуги и цены</h2>
-            <ul class="price-list">
-                <li class="price-item">
-                    <p class="price-item-text" >Мужская стрижка</p>
-                    <p class="price-item-text" >от 300 грн.</p>
-                </li>
-                <li class="price-item">
-                    <p class="price-item-text" >Стрижка бороды</p>
-                    <p class="price-item-text" >от 200 грн.</p>
-                </li>
-                <li class="price-item">
-                    <p class="price-item-text" >Стрижка усов</p>
-                    <p class="price-item-text" >от 200 грн.</p>
-                </li>
-                <li class="price-item">
-                    <p class="price-item-text" >Бритье опасной бритвой</p>
-                    <p class="price-item-text" >от 200 грн.</p>
-                </li>
-            </ul>
-            <ul class="price-list">
-                <li class="price-item">
-                    <p class="price-item-text" >Cтрижка у стажера</p>
-                    <p class="price-item-text" >от 300 грн.</p>
-                </li>
-                <li class="price-item">
-                    <p class="price-item-text" >Стрижка под насадку</p>
-                    <p class="price-item-text" >от 200 грн.</p>
-                </li>
-                <li class="price-item">
-                    <p class="price-item-text" >Детская стрижка (до 12 лет)</p>
-                    <p class="price-item-text" >от 200 грн.</p>
-                </li>
-                <li class="price-item">
-                    <p class="price-item-text" >Камуфлирование седины</p>
-                    <p class="price-item-text" >от 200 грн.</p>
-                </li>
-            </ul>
-            <button type="button" class="second-btn">онлайн-запись</button>
+            <div class="price-wrap">
+                <ul class="price-list">
+                    <li class="price-item">
+                        <p class="price-item-text">Мужская стрижка</p>
+                        <p class="price-item-text">от 300 грн.</p>
+                    </li>
+                    <li class="price-item">
+                        <p class="price-item-text">Стрижка бороды</p>
+                        <p class="price-item-text">от 200 грн.</p>
+                    </li>
+                    <li class="price-item">
+                        <p class="price-item-text">Стрижка усов</p>
+                        <p class="price-item-text">от 200 грн.</p>
+                    </li>
+                    <li class="price-item">
+                        <p class="price-item-text">Бритье опасной бритвой</p>
+                        <p class="price-item-text">от 200 грн.</p>
+                    </li>
+                </ul>
+                <ul class="price-list">
+                    <li class="price-item">
+                        <p class="price-item-text">Cтрижка у стажера</p>
+                        <p class="price-item-text">от 300 грн.</p>
+                    </li>
+                    <li class="price-item">
+                        <p class="price-item-text">Стрижка под насадку</p>
+                        <p class="price-item-text">от 200 грн.</p>
+                    </li>
+                    <li class="price-item">
+                        <p class="price-item-text">Детская стрижка (до 12 лет)</p>
+                        <p class="price-item-text">от 200 грн.</p>
+                    </li>
+                    <li class="price-item">
+                        <p class="price-item-text">Камуфлирование седины</p>
+                        <p class="price-item-text">от 200 грн.</p>
+                    </li>
+                </ul>
+            </div>
+            <button type="button" class="price-btn btn">онлайн-запись</button>
             </div>
         </section>
         <!-- секція4 -->
         <section class="advanteges section">
             <div class="container">
             <ul class="advanteges-list">
-                <li class="achive-box">
-                    <p class="achivment">600</p>
-                    <p class="achivment-about">Довольных клиентов в день</p>
-                </li>
-                <li class="achive-box">
-                    <p class="achivment">50</p>
-                    <p class="achivment-about">Наград за отличный сервис</p>
-                </li>
+                <div class="advantage-wrap">
+                    <li class="achive-box">
+                        <p class="achivment">600</p>
+                        <p class="achivment-about">Довольных клиентов в день</p>
+                    </li>
+                    <li class="achive-box">
+                        <p class="achivment">50</p>
+                        <p class="achivment-about">Наград за отличный сервис</p>
+                    </li>
+                </div>
+                <div class="advantage-wrap"> 
                 <li class="achive-box">
                     <p class="achivment">20</p>
                     <p class="achivment-about">Лучших мастеров Киева</p>
@@ -130,29 +137,33 @@
                     <p class="achivment">100</p>
                     <p class="achivment-about">Подарков постоянным клиентам</p>
                 </li>
+                </div>
             </ul>
-            <p class="bright-pre-title">старая традиционная школа</p>
-            <h2 class="bright-fone-title">Почему приходят именно к нам?</h2>
-            <p class="advanteges-about">О нас говорят только хорошее. Но лучше 1 раз увидеть и прочувствовать, чем 10 раз прочитать.</p>
+            <div class="advantege-cont">
+                <p class="pre-title advanteges-pre">старая традиционная школа</p>
+                <h2 class="title advanteges-title">Почему приходят именно к нам?</h2>
+                <p class="after-title advanteges-about">О нас говорят только хорошее. Но лучше 1 раз увидеть и прочувствовать, чем 10 раз прочитать.
+                </p>
+            </div>
             </div>
         </section>
         <!-- секція5 -->
         <section class="masters section">
             <div class="container">
-            <p class="bright-pre-title">для настоящих ценителей атмосферы</p>
-            <h2 class="bright-fone-title">Наши мастера</h2>
-            <ul>
-                <li>
+            <p class="pre-title master-pre">для настоящих ценителей атмосферы</p>
+            <h2 class="title master-title">Наши мастера</h2>
+            <ul class="masters-card">
+                <li class="masters-content">
                     <img src="./image/img1Master-min.jpg" alt="Барбер робить окантовку" width="370" height="346">
                     <h3  class="master-name" lang="en">John Smith</h3>
                     <p class="position" lang="en">Extreme Barber</p>
                 </li>
-                <li>
+                <li class="masters-content">
                     <img src="./image/img2Master-min.jpg" alt="Барбер з машинкою" width="370" height="346">
                     <h3  class="master-name" lang="en">Michele Doe</h3>
                     <p class="position" lang="en">Extreme Barber</p>
                 </li>
-                <li>
+                <li class="masters-content">
                     <img src="./image/img3Master-min.jpg" alt="Барбер з гребенем" width="370" height="346">
                     <h3 class="master-name" lang="en">Alan Black</h3>
                     <p class="position" lang="en">Extreme Barber</p>
@@ -163,14 +174,14 @@
         <!-- секція6 -->
         <section class="galery section">
             <div class="container">
-            <p class="bright-pre-title">На латинском языке “барба” означает “борода”</p>
+            <p class="pre-title galery-pre">На латинском языке “барба” означает “борода”</p>
             <!-- Скритий заголовок -->
-            <h2 class="visually-hidden"></h2>
+            <h2 class="visually-hidden">Фото майстрів</h2>
             <ul class="galery-list">
-                <li><img src="./image/1Барбер-min.jpg" alt="барбер 1" width="270" height="360"></img></li>
-                <li><img src="./image/2Барбер-min.jpg" alt="барбер 2" width="270" height="360"></img></li>
-                <li><img src="./image/3Барбер-min.jpg" alt="барбер 3" width="270" height="360"></img></li>
-                <li><img src="./image/4Барбер-min.jpg" alt="барбер 4" width="270" height="360"></img></li>
+                <li class="galery-item"><img src="./image/1Барбер-min.jpg" alt="барбер 1" width="270" height="360"></img></li>
+                <li class="galery-item"><img src="./image/2Барбер-min.jpg" alt="барбер 2" width="270" height="360"></img></li>
+                <li class="galery-item"><img src="./image/3Барбер-min.jpg" alt="барбер 3" width="270" height="360"></img></li>
+                <li class="galery-item"><img src="./image/4Барбер-min.jpg" alt="барбер 4" width="270" height="360"></img></li>
             </ul>
             </div>
         </section>
