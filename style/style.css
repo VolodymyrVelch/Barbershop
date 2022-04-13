@@ -180,7 +180,11 @@ margin-right: 40px;
 .hero-content{
   padding: 272px 0 206px 96px;
   flex-grow: 1;
-  background-color: #000;
+  background-color:#191C26 ;
+  background-image: linear-gradient(rgba(25, 28, 38, 0.2), rgba(25, 28, 38, 0.2)), url(../image/hero-main.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .pre-title {
@@ -242,7 +246,14 @@ margin-left: 30px;
   padding-bottom: 130px;
 }
 .service{
-  background-color: black;
+  margin: 0 auto;
+background-color: #191C26;
+background-image: url(../image/price\ .png) ;
+max-width: 1280px;
+background-position: center;
+background-size: cover;
+background-repeat: no-repeat;
+
 }
 .service-pre-title{
   margin-bottom: 20px;
@@ -259,9 +270,8 @@ margin-left: 30px;
   margin-bottom: 40px;
 
   color: var(--first-title-color);
-  background: #000;
 }
-/* Ціна послуг */
+/* ПОСЛУГИ І ЦІНИ */
 .price-wrap{
   display: flex;
   margin-bottom: 50px;
@@ -390,6 +400,29 @@ margin-left: 30px;
 margin-bottom: 30px;
 }
 /* контакти */
+.contact-title,
+.check-in-title{
+  color: var(--first-title-color);
+}
+.comunication{
+display: flex;
+justify-content: space-evenly;
+background-color: #191C26;
+}
+.comunication section{
+  flex-basis: 50%;
+  padding: 50px;
+  /* padding: 50px 0 50px 70px */
+}
+.adress{
+ background-image: url(../image/Bg-contact.png);
+ background-position:center;
+ background-repeat: no-repeat;
+ background-size: cover;
+ width: 625px;
+ height:644px ;
+}
+
 .contacts-link{
   font-style: normal;
   font-weight: 400;
@@ -414,6 +447,18 @@ color: var(--first-title-color);
   color: var(--fone-text-color);
 }
 /* ФУТЕР */
+.footer{
+  display: flex;
+  padding: 55px;
+  align-items: center;
+}
+.footer-link{
+  display: flex;
+  margin-left: auto;
+}
+.footer-link li:last-child{
+margin-left: 40px;
+}
 .copyright{
   font-weight: 600;
   font-size: 11px;
