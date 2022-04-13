@@ -365,10 +365,16 @@ letter-spacing: 0.02em;
   margin-left: -30px;
 }
 .masters-content{
+  
 flex-basis: calc(100%/3 -30px);
 margin-left: 30px;
 }
+.masters-content article{
+  display: block;
+  width: 360px;
+}
 .master-name{
+  display: block;
 margin: 30px 0 8px 0;
 
 font-size: 18px;
@@ -377,11 +383,17 @@ text-align: center;
 letter-spacing: 0.02em;
 }
 .position{
+  display: block;
 font-size: 14px;
 line-height: 1.36;
 text-align: center;
 letter-spacing: 0.02em;
 color: var(--accent-color);
+}
+.social{
+  display: flex;
+  align-items: center;
+
 }
 /* Галерея */
 .galery-pre{
