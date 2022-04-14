@@ -9,7 +9,8 @@
   --second-fone-color:#F7F7F7 ;
   --main-fone-color:#FFFFFF;
   --margin-between:20px;
-}
+  --animation-function:cubic-bezier(0.4, 0, 0.2, 1);
+}  
 *{
   box-sizing: border-box;
 }
@@ -89,7 +90,6 @@ ul {
 .header-item:not(:last-child){
 margin-right: 40px;
 }
-
 .header-link,
 .header-tel {
   font-weight: 600;
@@ -145,6 +145,8 @@ margin-right: 40px;
 }
 .hero-pre-title {
   margin-bottom: var(--margin-between);
+  display: flex;
+  align-items: center;
 
   font-family: 'Open Sans' sans-serif;
   font-style: normal;
@@ -153,8 +155,17 @@ margin-right: 40px;
   line-height: 1.36;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-
   color: var(--pretitle-text-color);
+}
+.hero-pre-title::before{
+  display: flex;
+  content: '';
+  margin-right: 20px;
+  justify-content: baseline;
+ 
+  height:1px;
+  width: 63px;
+  background-color: var(--pretitle-text-color);
 }
 .hero-title {
   margin-bottom:var(--margin-between);
@@ -221,10 +232,25 @@ margin-left: 30px;
 .about-content{
   margin-left: 64px;
 }
-.about-pre, .about-title{
+.about-pre,
+.about-title{
+  display: flex;
+  align-items: center;
+  
   margin-bottom: 20px;
   color: var(--main-text-color);
 }
+.about-pre::before{
+  display: flex;
+  content: '';
+  margin-right: 20px;
+  justify-content: baseline;
+ 
+  height:1px;
+  width: 60px;
+  background-color: var(--main-text-color);
+}
+
 .about-after{
   margin-bottom: 20px;
   color: var(--content-text-color);
@@ -257,14 +283,25 @@ background-repeat: no-repeat;
 }
 .service-pre-title{
   margin-bottom: 20px;
+  display: flex;
+  align-items: center;
 
   font-weight: 600;
   font-size: 11px;
   line-height: 1.36;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  
   color:var(--pretitle-text-color);
+}
+.service-pre-title::before{
+  display: flex;
+  content: '';
+  margin-right: 20px;
+  justify-content: baseline;
+ 
+  height:1px;
+  width: 63px;
+  background-color: var(--pretitle-text-color);
 }
 .service-title{
   margin-bottom: 40px;
@@ -275,6 +312,12 @@ background-repeat: no-repeat;
 .price-wrap{
   display: flex;
   margin-bottom: 50px;
+}
+.price-list.first {
+  background: linear-gradient(180deg, #171A24 0%, rgba(23, 26, 36, 0.2) 100%);
+}
+.price-list.second {
+  background: linear-gradient(180deg, #090B13 0%, rgba(9, 11, 19, 0.2) 100%);
 }
 .price-list{
   padding: 30px 40px;
@@ -341,8 +384,21 @@ letter-spacing: 0.02em;
   padding: 123px 0 216px 130px;
 }
 .advanteges-pre{
+  display: flex;
+  align-items: center;
+
   margin-bottom: var(--margin-between);
   max-width: 412px;
+}
+.advanteges-pre::before{
+  display: flex;
+  content: '';
+  margin-right: 20px;
+  justify-content: baseline;
+ 
+  height:1px;
+  width: 63px;
+  background-color: var(--main-text-color);
 }
 .advanteges-title{
   margin-bottom: var(--margin-between);
@@ -354,7 +410,20 @@ letter-spacing: 0.02em;
   background-color: var(--second-fone-color);
 }
 .master-pre{
+  display: flex;
+  align-items: center;
+  
   margin-bottom: var(--margin-between);
+}
+.master-pre::before{
+  display: flex;
+  content: '';
+  margin-right: 20px;
+  justify-content: baseline;
+ 
+  height:1px;
+  width: 63px;
+  background-color: var(--main-text-color);
 }
 .master-title{
   margin-bottom: 44px;
@@ -384,6 +453,8 @@ letter-spacing: 0.02em;
 }
 .position{
   display: block;
+  margin-bottom: 30px;
+
 font-size: 14px;
 line-height: 1.36;
 text-align: center;
@@ -393,18 +464,50 @@ color: var(--accent-color);
 .social{
   display: flex;
   align-items: center;
+  justify-content: center;
+}
+.social-link{
+display: flex; 
 
+  background-color: var(--main-fone-color);
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+  transition: fill 250ms var(--animation-function);
+}
+.social-link:hover,
+.social-link:focus{
+  fill: var(--accent-color);
+  transition: fill 250ms var(--animation-function);
+}
+ 
+.social li+li{
+  margin-left: 10px;      
 }
 /* Галерея */
 .galery-pre{
+  display: flex;
+  align-items: center;
+
   margin-bottom: 44px;
+}
+.galery-pre::before{
+  display: flex;
+  content: '';
+  margin-right: 20px;
+  justify-content: baseline;
+ 
+  height:1px;
+  width: 63px;
+  background-color: var(--main-text-color);
 }
 .galery-list{
   display: flex;
   flex-wrap: wrap;
   margin-left: -30px;
   margin-bottom: -30px;
-  
 }
 .galery-item{
   flex-basis: calc(100%/4-30px);
