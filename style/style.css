@@ -21,7 +21,7 @@
   padding-right: 15px;
   margin-left: auto;
   margin-right: auto;
-  outline: 1px solid red;
+  /* outline: 1px solid red; */
 }
 body {
   font-family: 'Open Sans', sans-serif;
@@ -68,6 +68,7 @@ ul {
 .header {
   padding-top: 32px;
   padding-bottom: 32px;
+  background-color: #555555;
 }
 .header-logo {
   margin-right: 70px;
@@ -160,8 +161,13 @@ ul {
   display: flex;
 }
 .hero-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 93px;
+  transform: rotate(-90deg);
 }
+
 .hero-link {
   font-style: normal;
   font-weight: 600;
@@ -283,7 +289,7 @@ ul {
 .price-item {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: baseline;
 }
 .price-item::before {
   content: '';
@@ -311,22 +317,40 @@ ul {
   color: var(--first-title-color);
 }
 /* наші досягнення */
+
 .advanteges .container {
   display: flex;
+  justify-content: space-between;
 }
 .advanteges-list {
+  width: 370px;
   display: flex;
-  padding: 114px 0 137px 55px;
+  flex-wrap: wrap;
 }
-.achive-box {
+.advantege-block,
+.advantege-cont {
+  width: calc(50% - 15px);
+}
+.advantege-block {
+  display: flex;
+  justify-content: center;
+}
+
+.advant-item {
   padding: 20px 24px;
 
   width: 170px;
   height: 133px;
   background-color: var(--second-fone-color);
 }
-
+.advant-item:nth-child(odd) {
+  margin-right: 30px;
+}
+.advant-item:nth-child(even) {
+  margin-top: 30px;
+}
 .achivment {
+  display: block;
   margin-bottom: 6px;
 
   font-weight: 700;
@@ -347,32 +371,16 @@ ul {
   font-size: 18px;
   line-height: 1.67;
   letter-spacing: 0.02em;
+  width: 500px;
 }
 .advantege-cont {
-  padding: 123px 0 216px 130px;
-}
-.advanteges-pre {
-  display: flex;
-  align-items: center;
-
-  margin-bottom: var(--margin-between);
-  max-width: 412px;
-}
-.advanteges-pre::before {
-  display: flex;
-  content: '';
-  margin-right: 20px;
-  justify-content: baseline;
-
-  height: 1px;
-  width: 63px;
-  background-color: var(--main-text-color);
+  padding-top: 10px;
 }
 .advanteges-title {
+  margin-top: var(--margin-between);
   margin-bottom: var(--margin-between);
   max-width: 500px;
 }
-
 /* Майстри */
 .masters {
   background-color: var(--second-fone-color);
@@ -453,38 +461,61 @@ ul {
   margin-bottom: 30px;
 }
 /* контакти */
-.contact-title,
+
 .check-in-title {
   color: var(--first-title-color);
 }
+
 .comunication {
-  display: flex;
-  justify-content: space-evenly;
-  background-color: #191c26;
-}
-.comunication section {
-  flex-basis: 50%;
-  padding: 50px;
-  /* padding: 50px 0 50px 70px */
-}
-.adress {
   background-image: url(../image/Bg-contact.png);
-  background-position: center;
+  background-color: #191c26;
   background-repeat: no-repeat;
-  background-size: cover;
-  width: 625px;
-  height: 644px;
+  background-position: right;
+  max-width: 1280px;
+  margin: 0 auto;
+  background-size: calc(50% - 15px);
 }
 
+.comunication .container {
+  display: flex;
+}
+.adress {
+  width: calc(50% - 15px);
+  padding-top: 130px;
+  padding-bottom: 130px;
+  padding-left: 100px;
+}
+.online {
+  flex-grow: 1;
+  padding-top: 130px;
+  padding-bottom: 130px;
+}
+.contact-title {
+  margin-bottom: 40px;
+
+  color: var(--first-title-color);
+}
 .contacts-link {
   font-style: normal;
-  font-weight: 400;
   font-size: 18px;
   line-height: 1.67;
   letter-spacing: 0.02em;
   color: var(--fone-text-color);
 }
+.adress ul {
+  margin-bottom: 70px;
+}
+.contact-item:not(last-child) {
+  margin-bottom: var(--margin-between);
+}
+.contact-item [href] {
+  display: inline-block;
+  width: 230px;
+}
+
 .schedual-title {
+  margin-bottom: var(--margin-between);
+
   font-weight: 600;
   font-size: 11px;
   line-height: 1.36;
