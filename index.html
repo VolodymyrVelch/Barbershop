@@ -10,9 +10,10 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Raleway:wght@700&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css">
-    <link rel="stylesheet" href="./style/style.css">
+    <!-- <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"> -->
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/main.min.css">
     <title>Barbershop</title>
 </head>
 
@@ -33,7 +34,7 @@
             </nav>
             <div class="cont-header">
                 <a href="Tel:+380441111111" class="header-tel">+38 044 111 11 11</a></li>
-                <button type="button" class="btn-header btn">Онлайн-запись</button> </li>
+                <button type="button" data-modal-open class="btn-header btn">Онлайн-запись</button> </li>
             </div>
         </div>
     </header>
@@ -43,10 +44,13 @@
         <section class="hero">
             <div class="container">
                 <!-- бокове -->
-                <ul class="hero-item">
-                    <li><a class="hero-link" href="" target="_blank">Instagram</a></li>
-                    <li><a class="hero-link" href="" target="_blank">YouTube</a></li>
-                </ul>
+                <div class="hero-soc">
+                    <ul class="hero-list">
+                        <li class="hero-item"><a class="hero-link" href="" target="_blank">Instagram</a></li>
+                        <li class="hero-item"><a class="hero-link" href="" target="_blank">YouTube</a></li>
+                    </ul>
+                </div>
+
                 <div class="hero-content">
                     <p lang="en" class="pre-title hero-pre-title">A hair salon for men in Kyiv</p>
                     <h1 lang="en" class="hero-title">BarberShop</h1>
@@ -72,7 +76,7 @@
                         то уже никогда не сможешь быть прежним. Мы команда, которая всегда с клиентами "на одной волне".
                         Поэтому, мы всегда
                         готовы усовершенствовать каждого, кто к нам приходит!</p>
-                    <button type="button" class="about-btn btn">онлайн-запись</button>
+                    <button type="button" data-modal-open class="about-btn btn">онлайн-запись</button>
                 </div>
             </div>
         </section>
@@ -119,7 +123,7 @@
                         </li>
                     </ul>
                 </div>
-                <button type="button" class="price-btn btn">онлайн-запись</button>
+                <button type="button" data-modal-open class="price-btn btn">онлайн-запись</button>
             </div>
         </section>
         <!-- секція4 -->
@@ -274,6 +278,23 @@
             <div class="container">
                 <section class="online">
                     <h2 class="title check-in-title">Онлайн-запись</h2>
+                    <form class="form" action="">
+                        <label class="form-name" for="">
+
+                            <input class="form-input" type="text" placeholder="Имя*">
+                        </label>
+                        <label for="" name="telephone">
+                            Телефон*
+                            <input type="tel">
+                        </label>
+                        <label class="textarea" for="">
+                            сообщение
+                            <textarea name="text" id="" cols="30" rows="1" resize="none"></textarea>
+                        </label>
+                    </form>
+
+                    <button class="btn form__btn" type="submit">отправить</button>
+
                 </section>
                 <!-- секція8 -->
                 <section class="adress">
@@ -303,6 +324,12 @@
                 <li footer-link><a class="social" href="" target="_blank" class="">YouTube</a></li>
             </ul>
         </div>
+        <div class="backdrop is-hidden" data-modal>
+            <div class="modal">
+                <button type="button" class="modal-close" data-modal-close>X</button>
+            </div>
+        </div>
+        <script src="./js/modal.js"></script>
     </footer>
 </body>
 
