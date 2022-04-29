@@ -1,0 +1,44 @@
+.header {
+    padding-top: 32px;
+    padding-bottom: 32px;
+    position: absolute;
+    width: 100%;
+  }
+  .header__logo {
+    margin-right: 70px;
+  }
+  .header .container {
+    display: flex;
+    align-items: center;
+  }
+  .header__list {
+    display: flex;
+  }
+  .header__contact {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+  }
+  .header__tel {
+    margin-right: 40px;
+  }
+  .header__item:not(:last-child) {
+    margin-right: 40px;
+  }
+  .header__link,
+  .header__tel {
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 1.33;
+    letter-spacing: 0.1em;
+  
+    color: var(--first-title-color);
+    transition: color 300ms linear;
+  }
+  .header__link:hover,
+  .header__link:focus,
+  .header__tel:hover,
+  .header__tel:focus {
+    color: var(--accent-color);
+  }
+  
