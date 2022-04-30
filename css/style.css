@@ -109,7 +109,7 @@ ul {
   color: var(--accent-color);
 } */
 
-.btn {
+/* .btn {
   font-family: inherit;
   font-weight: 600;
   font-size: 12px;
@@ -135,10 +135,10 @@ ul {
 }
 .btn__header:hover {
   color: var(--main-text-color);
-}
+} */
 
 /* TITLE */
-.pre-title {
+/* .pre-title {
   display: flex;
   align-items: center;
 
@@ -167,7 +167,7 @@ ul {
   font-size: 18px;
   line-height: 1.67;
   letter-spacing: 0.02em;
-}
+} */
 /* ----HERO---- */
 .hero .container {
   display: flex;

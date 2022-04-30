@@ -1,0 +1,73 @@
+.advanteges .container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.advanteges-list {
+    width: 370px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.advantege-block,
+.advantege-cont {
+    width: calc(50% - 15px);
+}
+
+.advantege-block {
+    display: flex;
+    justify-content: center;
+}
+
+.advant-item {
+    padding: 20px 24px;
+
+    width: 170px;
+    height: 133px;
+    background-color: var(--second-fone-color);
+}
+
+.advant-item:nth-child(odd) {
+    margin-right: 30px;
+}
+
+.advant-item:nth-child(even) {
+    margin-top: 30px;
+}
+
+.achivment {
+    display: block;
+    margin-bottom: 6px;
+
+    font-weight: 700;
+    font-size: 42px;
+    line-height: 1.36;
+    text-align: center;
+    letter-spacing: 0.05em;
+    color: var(--main-text-color);
+}
+
+.achivment-about {
+    font-weight: 600;
+    font-size: 11px;
+    line-height: 1.36;
+    text-align: center;
+    color: var(--main-text-color);
+}
+
+.advanteges-about {
+    font-size: 18px;
+    line-height: 1.67;
+    letter-spacing: 0.02em;
+    width: 500px;
+}
+
+.advantege-cont {
+    padding-top: 10px;
+}
+
+.advanteges-title {
+    margin-top: var(--margin-between);
+    margin-bottom: var(--margin-between);
+    max-width: 500px;
+}

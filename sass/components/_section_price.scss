@@ -1,0 +1,79 @@
+.service {
+    margin: 0 auto;
+    background-color: #191c26;
+    background-image: url(../image/price\ .png);
+    max-width: 1280px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.service-pre-title {
+    color: var(--pretitle-text-color);
+}
+
+.service-title {
+    margin-bottom: 40px;
+
+    color: var(--first-title-color);
+}
+
+/* ПОСЛУГИ І ЦІНИ */
+.price-wrap {
+    display: flex;
+    margin-bottom: 50px;
+}
+
+.price-list.first {
+    background: linear-gradient(180deg, #171a24 0%, rgba(23, 26, 36, 0.2) 100%);
+}
+
+.price-list.second {
+    background: linear-gradient(180deg, #090b13 0%, rgba(9, 11, 19, 0.2) 100%);
+}
+
+.price-list {
+    padding: 30px 40px;
+    flex-grow: 1;
+
+    border: 1px solid white;
+}
+
+.price-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+
+    &::before {
+        content: '';
+        height: 1px;
+        margin-left: 6px;
+        margin-right: 6px;
+        flex-grow: 1;
+        background-color: var(--content-text-color);
+    }
+}
+
+
+.price-item-text:first-child {
+    order: -1;
+}
+
+.price-item-text {
+    margin-bottom: 20px;
+
+    font-size: 18px;
+    line-height: 1.67;
+    letter-spacing: 0.02em;
+    color: var(--fone-text-color);
+}
+
+.price-btn {
+    display: block;
+    margin: 0 auto;
+    color: var(--first-title-color);
+
+    &:hover {
+        color: var(--main-text-color);
+    }
+}

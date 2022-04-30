@@ -1,0 +1,101 @@
+.modal__content {
+    padding: 40px 25px 25px 25px;
+    text-align: center;
+}
+
+.modal__form {
+    margin-bottom: 70px;
+}
+
+.modal__title {
+    margin-bottom: 30px;
+}
+
+.modal__cont {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 60px;
+}
+
+.modal__field {
+    position: relative;
+    width: 100%;
+
+    &:last-child {
+        margin-top: 30px;
+    }
+}
+
+.modal__lable {
+    position: absolute;
+    left: 0;
+    font-weight: 600;
+    font-size: 11px;
+    line-height: 1.36;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: $main-text-color;
+    cursor: pointer;
+    transition: transform 300ms, color 300ms;
+}
+
+.modal__input {
+    border: transparent;
+    background-color: transparent;
+    outline: none;
+    cursor: pointer;
+    width: 100%;
+    height: 24px;
+    border-bottom: 1px solid $main-text-color;
+    color: $main-text-color;
+
+    &:focus {
+        border-bottom: 1px solid $accent-color;
+    }
+
+    &:focus+.modal__lable,
+    &:not(:placeholder-shown)+.modal__lable {
+        transform: translateY(-100%);
+        color: $accent-color;
+    }
+}
+
+.modal-text__field {
+    position: relative;
+}
+
+.modal__textarea {
+    width: 100%;
+    height: 80px;
+    background-color: transparent;
+    outline: none;
+    border: transparent;
+    border-bottom: 1px solid $main-text-color;
+    resize: none;
+    color: $main-text-color;
+    cursor: pointer;
+
+    &:focus {
+        border-bottom: 1px solid $accent-color;
+    }
+
+    &:focus+.modal-text__lable,
+    &:not(:placeholder-shown)+.modal-text__lable {
+        transform: translateY(-100%);
+        color: $accent-color;
+    }
+}
+
+.modal-text__lable {
+    position: absolute;
+    left: 0;
+
+    font-weight: 600;
+    font-size: 11px;
+    line-height: 1.36;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: $main-text-color;
+    cursor: pointer;
+    transition: transform 300ms, color 300ms;
+}

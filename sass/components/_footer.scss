@@ -1,0 +1,37 @@
+.footer {
+    display: flex;
+    padding: 55px;
+    align-items: center;
+}
+
+.footer-link {
+    display: flex;
+    margin-left: auto;
+
+}
+
+.footer-link li:last-child {
+    margin-left: 40px;
+}
+
+.copyright {
+    font-weight: 600;
+    font-size: 11px;
+    line-height: 1.36;
+    letter-spacing: 0.2em;
+    color: var(--fone-text-color);
+}
+
+.social {
+    font-weight: 600;
+    font-size: 11px;
+    line-height: 1.36;
+    letter-spacing: 0.2em;
+    color: var(--fone-text-color);
+    transition: color 300ms;
+
+    &:hover,
+    &:focus {
+        color: $accent-color;
+    }
+}

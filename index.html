@@ -10,9 +10,6 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Raleway:wght@700&display=swap"
         rel="stylesheet">
-    <!-- <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"> -->
-    <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/main.min.css">
     <title>Barbershop</title>
 </head>
@@ -34,7 +31,7 @@
             </nav>
             <div class="header__contact">
                 <a href="Tel:+380441111111" class="header__tel">+38 044 111 11 11</a></li>
-                <button type="button" data-modal-open class="btn__header btn">Онлайн-запись</button> </li>
+                <button type="button" for="button" data-modal-open class="btn__header btn">Онлайн-запись</button> </li>
             </div>
         </div>
     </header>
@@ -63,8 +60,10 @@
         <section class="about section">
             <div class="container">
                 <ul class="about-list">
-                    <li><img src="./image/img 1about-min.jpg" alt="Барбер бреет" width="270" height="445"></li>
-                    <li><img src="./image/img 2about-min.jpg" alt="Барбер бреет висок" width="270" height="445"></li>
+                    <li class="about__item"><img src="./image/img 1about-min.jpg" alt="Барбер бреет" width="270"
+                            height="445"></li>
+                    <li class="about__item"><img src="./image/img 2about-min.jpg" alt="Барбер бреет висок" width="270"
+                            height="445"></li>
                 </ul>
                 <div class="about-content">
                     <p class="pre-title about-pre">О НАС</p>
@@ -76,7 +75,7 @@
                         то уже никогда не сможешь быть прежним. Мы команда, которая всегда с клиентами "на одной волне".
                         Поэтому, мы всегда
                         готовы усовершенствовать каждого, кто к нам приходит!</p>
-                    <button type="button" data-modal-open class="about-btn btn">онлайн-запись</button>
+                    <button type="button" class="about-btn btn">онлайн-запись</button>
                 </div>
             </div>
         </section>
@@ -123,7 +122,7 @@
                         </li>
                     </ul>
                 </div>
-                <button type="button" data-modal-open class="price-btn btn">онлайн-запись</button>
+                <button type="button" id="button" class="price-btn btn">онлайн-запись</button>
             </div>
         </section>
         <!-- секція4 -->
@@ -277,24 +276,30 @@
         <div class="comunication">
             <div class="container">
                 <section class="online">
-                    <h2 class="title check-in-title">Онлайн-запись</h2>
+                    <h2 class="title online__title">Онлайн-запись</h2>
                     <form class="form" action="">
-                        <label class="form-name" for="">
-
-                            <input class="form-input" type="text" placeholder="Имя*">
-                        </label>
-                        <label for="" name="telephone">
-                            Телефон*
-                            <input type="tel">
-                        </label>
-                        <label class="textarea" for="">
-                            сообщение
-                            <textarea name="text" id="" cols="30" rows="1" resize="none"></textarea>
-                        </label>
+                        <div class="form__cont">
+                            <div class="form__fild">
+                                <input class="form__input" id="form__name" type="text" placeholder=" ">
+                                <label class="form__name" for="form__name">
+                                    Имя*
+                                </label>
+                            </div>
+                            <div class="form__fild">
+                                <input class="form__input" id="form__tel" type="tel" placeholder=" ">
+                                <label class="form__tel" for="form__tel" name="telephone">
+                                    Телефон*
+                                </label>
+                            </div>
+                        </div>
+                        <div class="text-area__field">
+                            <textarea class="textarea" name="textarea" id="textarea" cols="30" rows="1" resize="none"
+                                placeholder=" "></textarea>
+                            <label class="text__lable" for="textarea">сообщение
+                            </label>
+                        </div>
                     </form>
-
                     <button class="btn form__btn" type="submit">отправить</button>
-
                 </section>
                 <!-- секція8 -->
                 <section class="adress">
@@ -324,10 +329,38 @@
                 <li footer-link><a class="social" href="" target="_blank" class="">YouTube</a></li>
             </ul>
         </div>
-        <div class="backdrop is-hidden" data-modal>
+
+        <div class="backdrop    is-hidden" data-modal>
             <div class="modal">
                 <button type="button" class="modal-close" data-modal-close>X</button>
+                <div class="modal__content">
+                    <h2 class="title modal__title">Онлайн-запись</h2>
+                    <form class="modal__form" action="">
+                        <div class="modal__cont">
+                            <div class="modal__field">
+                                <input class="modal__input" id="modal__name" type="text" placeholder=" ">
+                                <label class="modal__lable" for="modal__name">
+                                    Имя*
+                                </label>
+                            </div>
+                            <div class="modal__field">
+                                <input class="modal__input" id="modal__tel" type="tel" placeholder=" ">
+                                <label class="modal__lable" for="modal__tel" name="telephone">
+                                    Телефон*
+                                </label>
+                            </div>
+                        </div>
+                        <div class="modal-text__field">
+                            <textarea class="modal__textarea" name="textarea" id="modal__textarea" cols="30" rows="1"
+                                resize="none" placeholder=" "></textarea>
+                            <label class="modal-text__lable" for="modal__textarea">сообщение
+                            </label>
+                        </div>
+                    </form>
+                    <button class="btn " type="submit">отправить</button>
+                </div>
             </div>
+
         </div>
         <script src="./js/modal.js"></script>
     </footer>
