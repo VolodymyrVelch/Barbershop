@@ -47,32 +47,6 @@
     }
 }
 
-.pre-title--hero {
-    color: var(--pretitle-text-color);
-}
-
-.hero__title {
-    margin-bottom: var(--margin-between);
-
-    font-family: 'Raleway';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 72px;
-    line-height: 1.18;
-    letter-spacing: 0.05em;
-
-    color: var(--first-title-color);
-}
-
-.hero__after-title {
-    text-align: left;
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 1.36;
-    letter-spacing: 0.02em;
-    color: var(--fone-text-color);
-    width: 400px;
-}
 
 .hero__content {
     padding: 272px 0 206px 96px;

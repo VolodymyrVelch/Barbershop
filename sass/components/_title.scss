@@ -7,16 +7,17 @@
     line-height: 1.36;
     letter-spacing: 0.1em;
     text-transform: uppercase;
+
+    &::before {
+        content: '';
+        margin-right: 20px;
+        justify-content: baseline;
+        height: 1px;
+        width: 63px;
+        background-color: currentColor;
+    }
 }
 
-.pre-title::before {
-    content: '';
-    margin-right: 20px;
-    justify-content: baseline;
-    height: 1px;
-    width: 63px;
-    background-color: currentColor;
-}
 
 .title {
     font-weight: 700;
@@ -26,7 +27,39 @@
 }
 
 .after-title {
-    font-size: 18px;
-    line-height: 1.67;
+    font-size: 16px;
+    line-height: 1.63;
     letter-spacing: 0.02em;
+
+    @include desktop {
+        font-size: 18px;
+        line-height: 1.67;
+    }
+}
+
+.pre-title--hero {
+    color: var(--pretitle-text-color);
+}
+
+.hero__title {
+    margin-bottom: var(--margin-between);
+
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 72px;
+    line-height: 1.18;
+    letter-spacing: 0.05em;
+
+    color: var(--first-title-color);
+}
+
+.hero__after-title {
+    text-align: left;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.36;
+    letter-spacing: 0.02em;
+    color: var(--fone-text-color);
+    width: 400px;
 }

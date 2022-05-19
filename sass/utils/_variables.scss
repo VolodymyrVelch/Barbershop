@@ -12,6 +12,8 @@
   --animation-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+
+
 $main-text-color: #303030;
 $fone-text-color: #9da4bd;
 $pretitle-text-color: rgba(157, 164, 189, 0.6);
@@ -29,13 +31,57 @@ $animation-function: cubic-bezier(0.4, 0, 0.2, 1);
   box-sizing: border-box;
 }
 
+// @mixin media ($size) {
+//   @media screen and (min-width: $size) {
+//     @content;
+//   }
+// }
+
+// @mixin media_max ($size) {
+//   @media screen and (max-width: $size) {
+//     @content;
+//   }
+// }
+@mixin mobile {
+  @media screen and (min-width: 480px) {
+    @content;
+  }
+}
+
+@mixin mobile-max {
+  @media screen and (max-width: 767px) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media screen and (min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media screen and (min-width: 1200px) {
+    @content;
+  }
+}
+
 .container {
-  width: 1200px;
+  width: 480px;
   padding-left: 15px;
   padding-right: 15px;
   margin-left: auto;
   margin-right: auto;
-  /* outline: 1px solid red; */
+  // outline: 1px solid red;
+
+  @include tablet {
+    width: 768px;
+    // outline: 1px solid gold;
+  }
+
+  @include desktop {
+    width: 1200px;
+  }
 }
 
 body {
@@ -45,6 +91,17 @@ body {
 }
 
 .section {
-  padding-top: 130px;
-  padding-bottom: 130px;
+  padding-top: 84px;
+  padding-bottom: 84px;
+
+  @include tablet {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+
+  @include desktop {
+    padding-top: 130px;
+    padding-bottom: 130px;
+
+  }
 }
