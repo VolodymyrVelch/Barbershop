@@ -20,10 +20,15 @@
 
 
 .title {
+    font-size: 28px;
+    line-height: 1.18;
     font-weight: 700;
-    font-size: 42px;
-    line-height: 1.17;
     letter-spacing: 0.05em;
+
+    @include desktop {
+        font-size: 42px;
+        line-height: 1.17;
+    }
 }
 
 .after-title {
@@ -43,23 +48,34 @@
 
 .hero__title {
     margin-bottom: var(--margin-between);
-
     font-family: 'Raleway';
     font-style: normal;
     font-weight: 700;
-    font-size: 72px;
-    line-height: 1.18;
     letter-spacing: 0.05em;
-
     color: var(--first-title-color);
+    font-size: 48px;
+    line-height: 1.17;
+
+    @include desktop {
+        font-size: 72px;
+        line-height: 1.18;
+
+    }
+
 }
 
 .hero__after-title {
     text-align: left;
     font-weight: 400;
-    font-size: 18px;
-    line-height: 1.36;
+    font-size: 16px;
+    line-height: 1.63;
     letter-spacing: 0.02em;
     color: var(--fone-text-color);
     width: 400px;
+
+    @include desktop {
+        font-size: 18px;
+        line-height: 1.36;
+
+    }
 }

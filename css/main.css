@@ -256,6 +256,59 @@ summary {
   display: list-item;
 }
 
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
+  margin: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/* скриваєм крапки, підкреслення */
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* скриті заголовки */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  -webkit-clip-path: inset(100%);
+          clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
 :root {
   --main-text-color: #303030;
   --fone-text-color: #9da4bd;
@@ -276,11 +329,15 @@ summary {
 }
 
 .container {
-  width: 480px;
   padding-left: 15px;
   padding-right: 15px;
   margin-left: auto;
   margin-right: auto;
+}
+@media screen and (min-width: 480px) {
+  .container {
+    width: 480px;
+  }
 }
 @media screen and (min-width: 768px) {
   .container {
@@ -316,55 +373,105 @@ body {
   }
 }
 
-*,
-*::before,
-*::after {
-  -webkit-box-sizing: inherit;
-          box-sizing: inherit;
+.section__color {
+  background-color: var(--second-fone-color);
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-p {
-  margin: 0;
+.master-title {
+  margin-bottom: 44px;
 }
 
-img {
+.masters-card {
+  margin: auto;
+}
+@media screen and (min-width: 1200px) {
+  .masters-card {
+    margin-left: -30px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+
+.masters-content {
+  text-align: center;
+}
+.masters-content:not(:last-child) {
+  margin-bottom: 64px;
+}
+@media screen and (min-width: 1200px) {
+  .masters-content {
+    -ms-flex-preferred-size: calc(33.3333333333% - 30px);
+        flex-basis: calc(33.3333333333% - 30px);
+    margin-left: 30px;
+  }
+}
+
+.masters-content article {
   display: block;
+  width: 360px;
 }
 
-html {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+.master-name {
+  display: block;
+  margin: 30px 0 8px 0;
+  font-size: 18px;
+  line-height: 1.39;
+  text-align: center;
+  letter-spacing: 0.02em;
 }
 
-/* скриваєм крапки, підкреслення */
-ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
+.position {
+  display: block;
+  margin-bottom: 30px;
+  font-size: 14px;
+  line-height: 1.36;
+  text-align: center;
+  letter-spacing: 0.02em;
+  color: var(--accent-color);
 }
 
-a {
-  text-decoration: none;
+.social {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
-/* скриті заголовки */
-.visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-  white-space: nowrap;
-  -webkit-clip-path: inset(100%);
-          clip-path: inset(100%);
-  clip: rect(0 0 0 0);
-  overflow: hidden;
+.social-link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: var(--main-fone-color);
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-transition: fill 250ms var(--animation-function);
+  transition: fill 250ms var(--animation-function);
+}
+
+.social-link:hover,
+.social-link:focus {
+  fill: var(--accent-color);
+  -webkit-transition: fill 250ms var(--animation-function);
+  transition: fill 250ms var(--animation-function);
+}
+
+.social li + li {
+  margin-left: 10px;
 }
 
 .btn {
@@ -424,10 +531,16 @@ a {
 }
 
 .title {
+  font-size: 28px;
+  line-height: 1.18;
   font-weight: 700;
-  font-size: 42px;
-  line-height: 1.17;
   letter-spacing: 0.05em;
+}
+@media screen and (min-width: 1200px) {
+  .title {
+    font-size: 42px;
+    line-height: 1.17;
+  }
 }
 
 .after-title {
@@ -451,18 +564,30 @@ a {
   font-family: "Raleway";
   font-style: normal;
   font-weight: 700;
-  font-size: 72px;
-  line-height: 1.18;
   letter-spacing: 0.05em;
   color: var(--first-title-color);
+  font-size: 48px;
+  line-height: 1.17;
+}
+@media screen and (min-width: 1200px) {
+  .hero__title {
+    font-size: 72px;
+    line-height: 1.18;
+  }
 }
 
 .hero__after-title {
   text-align: left;
   font-weight: 400;
-  font-size: 18px;
-  line-height: 1.36;
+  font-size: 16px;
+  line-height: 1.63;
   letter-spacing: 0.02em;
   color: var(--fone-text-color);
   width: 400px;
+}
+@media screen and (min-width: 1200px) {
+  .hero__after-title {
+    font-size: 18px;
+    line-height: 1.36;
+  }
 }/*# sourceMappingURL=main.css.map */

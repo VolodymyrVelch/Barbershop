@@ -1,6 +1,7 @@
 @import './utils/normalize';
-@import './utils/variables';
 @import './utils/reset';
+@import './utils/mixins';
+@import './utils/variables';
 @import './components/adaptive';
 
 @import './components/button';
