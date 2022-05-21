@@ -285,3 +285,9 @@ Add the correct display in Chrome and Safari.
 summary {
     display: list-item;
 }
+
+html,
+body {
+    /* Убирает прокрутку по горизонтале, для мобильной версии */
+    overflow-x: hidden;
+}

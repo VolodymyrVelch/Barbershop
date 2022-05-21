@@ -1,8 +1,18 @@
-.adress {
-    width: calc(50% - 15px);
-    padding-top: 130px;
-    padding-bottom: 130px;
-    padding-left: 100px;
+.comunication .adress {
+    background-image: url(../image/contact/Bgback_m-min.png);
+
+    @include tablet {
+        background-image: url(../image/contact/Bgback_t-min.png);
+    }
+
+    @include desktop {
+        background-image: url(../image/contact/Bgback_d-min.png);
+        width: calc(50% - 15px);
+        padding-top: 130px;
+        padding-bottom: 130px;
+        padding-left: 100px;
+
+    }
 }
 
 .contact-title {

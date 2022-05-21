@@ -4,10 +4,16 @@
 }
 
 .online {
-    flex-grow: 1;
-    padding-top: 130px;
-    padding-bottom: 130px;
-    padding-right: 40px;
+    padding: 84px 0;
+
+    @include tablet {
+        padding: 100px 0;
+    }
+
+    @include desktop {
+        flex-grow: 1;
+        padding: 130px 40px 130px 0;
+    }
 }
 
 .form {
@@ -16,13 +22,22 @@
 }
 
 .form__cont {
-    display: flex;
-    justify-content: space-between;
     margin-bottom: 44px;
+
+    @include tablet {
+        display: flex;
+        justify-content: space-between;
+    }
 }
 
 .form__fild {
     position: relative;
+
+    &:first-of-type {
+        margin-bottom: 44px;
+    }
+
+    @include desktop {}
 }
 
 .form__name {
@@ -59,10 +74,18 @@
     background-color: transparent;
     outline: none;
     cursor: pointer;
-    width: 260px;
     height: 24px;
     border-bottom: 1px solid $pretitle-text-color;
     color: $first-title-color;
+    width: 100%;
+
+    @include tablet {
+        width: 330px;
+    }
+
+    @include desktop {
+        width: 260px;
+    }
 
     &:focus {
         border-bottom: 1px solid $first-title-color;
@@ -120,10 +143,13 @@
 
 .form__btn {
     margin: auto;
-    margin-top: 44px;
     display: block;
     margin: 0 auto;
     color: var(--first-title-color);
+
+    @include tablet {
+        margin: 0;
+    }
 
     &:hover {
         color: var(--main-text-color);

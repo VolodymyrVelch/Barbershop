@@ -3,14 +3,25 @@
 }
 
 .galery-list {
-    display: flex;
-    flex-wrap: wrap;
-    margin-left: -30px;
-    margin-bottom: -30px;
+
+    @include tablet {
+        display: flex;
+        flex-wrap: wrap;
+        margin: -30px;
+    }
 }
 
 .galery-item {
-    flex-basis: calc(100% / 4 - 30px);
-    margin-left: 30px;
-    margin-bottom: 30px;
+    &:not(:last-child) {
+        margin-bottom: 30px;
+    }
+
+    @include tablet {
+        margin: 15px;
+        width: calc(100% / 2 - 30px);
+    }
+
+    @include desktop {
+        width: calc(100% / 4 - 30px);
+    }
 }

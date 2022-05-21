@@ -1,16 +1,29 @@
 .footer {
-    display: flex;
-    padding: 55px;
-    align-items: center;
+
+    @include tablet {
+
+        display: flex;
+        padding: 55px;
+        align-items: center;
+    }
 }
 
-.footer-link {
+.footer-list {
     display: flex;
     margin-left: auto;
+    align-items: center;
 
+    &::before {
+        content: '';
+        margin-right: 20px;
+        justify-content: baseline;
+        height: 1px;
+        width: 63px;
+        background-color: var(--fone-text-color);
+    }
 }
 
-.footer-link li:last-child {
+.footer-item:last-child {
     margin-left: 40px;
 }
 
@@ -34,4 +47,5 @@
     &:focus {
         color: $accent-color;
     }
+
 }
